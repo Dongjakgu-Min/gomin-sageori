@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const View = styled.div`
   padding: 20px;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 100px);
   width: auto;
   position: relative;
   display: flex;
