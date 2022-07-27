@@ -1,15 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import { View, Title, Content, Button } from '../component/View';
+import { View, Title, Content, Button, Container } from '../component/View';
 import FoodImg from '../static/image/undraw_eating_together_re_ux62.svg';
-
-const Container = styled.div`
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-`;
 
 function Main() {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const View = styled.div`
@@ -30,4 +29,12 @@ export const Button = styled.button`
   position: absolute;
   bottom: 20px;
   font-weight: bold;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 `;
