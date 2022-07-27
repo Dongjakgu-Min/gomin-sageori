@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { VscTriangleDown } from 'react-icons/vsc';
+import { VscTriangleDown, VscTriangleUp } from 'react-icons/vsc';
 import { dropdownProps } from '../types/type';
 
 const DropdownCont = styled.div`
@@ -24,7 +24,7 @@ const DropdownMenu = styled.ul`
   width: calc(100% - 30px);
   position: absolute;
   padding: 0 15px;
-  top: -20px;
+  top: -17px;
   left: -1px;
   z-index: 1;
 `;
@@ -33,6 +33,7 @@ const DropdownItem = styled.li`
   list-style: none;
   height: 45px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -46,7 +47,10 @@ function Dropdown({ data }: dropdownProps) {
         <VscTriangleDown onClick={() => setMenuVisible(!menuVisible)} />
         {menuVisible && (
           <DropdownMenu>
-            <DropdownItem>레드 파이어</DropdownItem>
+            <DropdownItem key={-1}>
+              랜덤
+              <VscTriangleUp onClick={() => setMenuVisible(!menuVisible)} />
+            </DropdownItem>
             {data.map((item) => {
               return <DropdownItem key={item.id}>{item.type}</DropdownItem>;
             })}
