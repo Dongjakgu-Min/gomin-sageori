@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { View, Title, Content } from '../component/View';
+import { View, Title, Content, Button } from '../component/View';
 import Dropdown from '../component/Dropdown';
 import { restaurantType } from '../types/type';
 import { TypeAPI } from '../API';
@@ -23,6 +23,7 @@ function Menu() {
       <Title>메뉴 찾기</Title>
       <Content>먹고 싶은 메뉴를 찾아보세요.</Content>
       <Dropdown data={type}/>
+      <Button>뽑기</Button>
     </View>
   );
 }

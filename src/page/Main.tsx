@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { View, Title, Content, Button, Container } from '../component/View';
 import FoodImg from '../static/image/undraw_eating_together_re_ux62.svg';
 
 function Main() {
+  const navigate = useNavigate();
+
   return (
     <View>
       <>
@@ -15,7 +18,7 @@ function Main() {
       <Container>
         <img src={FoodImg} width={300} height={300} />
       </Container>
-      <Button>다음</Button>
+      <Button onClick={() => navigate('/menu')}>다음</Button>
     </View>
   );
 }

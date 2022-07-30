@@ -27,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="/result" element={<Menu />} />
         </Routes>
       </BrowserRouter>
     </View>
